@@ -73,8 +73,8 @@ void deleteFirstDepartemen(list_departemen &Ldepartemen, address_departemen &P);
 void deleteAfterDepartemen(list_departemen &Ldepartemen, address_departemen &P);
 void deleteLastDepartemen(list_departemen &Ldepartemen, address_departemen &P);
 
-void deletePegawai(list_pegawai &Lpegawai, infotype_pegawai X);
-void deleteDepartemen(list_pegawai &Ldepartemen,infotype_departemen X);
+void deletePegawai(list_pegawai &Lpegawai, address_pegawai P);
+void deleteDepartemen(list_departemen &Ldepartemen, address_departemen D);
 
 //*Proses*//
 void printPegawai(list_pegawai Lpegawai);

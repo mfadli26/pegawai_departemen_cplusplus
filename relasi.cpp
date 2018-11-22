@@ -84,4 +84,5 @@ void printinfoRelasi(list_relasi Lrelasi){
         cout<<"Nama Departemen : "<<info(Departemen(Q)).nama_departemen<<endl;
         cout<<"-----------------------"<<endl;
         Q = nextRelasi(Q);
-};
+    }
+}

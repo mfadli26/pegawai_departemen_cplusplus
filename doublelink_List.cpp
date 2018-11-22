@@ -45,44 +45,24 @@ void dealokasiDepartemen(address_departemen P){
 
 address_pegawai findPegawai(list_pegawai Lpegawai, infotype_pegawai X){
     address_pegawai P = first(Lpegawai);
-    if (first(Lpegawai) == NULL){
-        cout<<"Error Data Tidak Ditemukan"<<endl;
-        P = NULL;
-        return P;
-    }
-    else {
-        while (info(P).nama != X.nama and next(P) != NULL){
-            P = next(P);
-        }
-        if (info(P).nama == X.nama){
+    while (P != NULL){
+        if(info(P).nip == X.nip){
             return P;
         }
-        else {
-            P = NULL;
-            return P;
-        }
+        P = next(P);
     }
+    return NULL;
 };
 
 address_departemen findDepartemen (list_departemen Ldepartemen, infotype_departemen X){
-    address_departemen P = first(Ldepartemen);
-    if (first(Ldepartemen) == NULL){
-        cout<<"Error Data Tidak Ditemukan"<<endl;
-        P = NULL;
-        return P;
+    address_departemen D = first(Ldepartemen);
+    while (D != NULL){
+        if(info(D).nama_departemen == X.nama_departemen){
+            return D;
+        }
+        D = next(D);
     }
-    else {
-        while (info(P).nama_departemen != X.nama_departemen and next(P) != NULL){
-            P = next(P);
-        }
-        if (info(P).nama_departemen == X.nama_departemen){
-            return P;
-        }
-        else {
-            P = NULL;
-            return P;
-        }
-    }
+    return NULL;
 };
 
 void insertPegawai(list_pegawai &Lpegawai, address_pegawai P){
@@ -147,6 +127,7 @@ void deleteLastPegawai(list_pegawai &Lpegawai, address_pegawai &P){
     }
 
 };
+
 void deleteFirstDepartemen(list_departemen &Ldepartemen, address_departemen &P){
     if (first(Ldepartemen) == last(Ldepartemen)) {
         first(Ldepartemen) = NULL;
@@ -191,17 +172,17 @@ void printPegawai(list_pegawai Lpegawai){
         cout<<"Daftar Pegawai Kosong"<<endl;
     }
     else {
+        int a = 1;
         address_pegawai P = first(Lpegawai);
         while (P != NULL){
             cout<<endl;
+            cout<<"Index = "<<a++<<endl;
             cout<<"Nama Pegawai = "<<info(P).nama<<endl;
             cout<<"Nip = "<<info(P).nip<<endl;
-            cout<<"Departemen = ";
             P = next(P);
-            cout<<endl;
         }
     }
-    cout<<endl;
+    cout<<endl<<"Back to menu...";
 };
 
 void printPegawai1(list_pegawai Lpegawai){
@@ -227,17 +208,17 @@ void printDepartemen(list_departemen Ldepartemen){
         cout<<"Daftar Departemen Kosong"<<endl;
     }
     else {
+        int a = 1;
         address_departemen P = first(Ldepartemen);
         while (P != NULL){
             cout<<endl;
+            cout<<"Index = "<<a++<<endl;
             cout<<"Nama Departemen = "<<info(P).nama_departemen<<endl;
             cout<<"Alamat = "<<info(P).alamat<<endl;
-            cout<<"Pegawai = ";
             P = next(P);
-            cout<<endl;
         }
     }
-    cout<<endl;
+    cout<<endl<<"Back to menu...";
 };
 
 void printDepartemen1(list_departemen Ldepartemen){
@@ -257,48 +238,27 @@ void printDepartemen1(list_departemen Ldepartemen){
     cout<<endl;
 };
 
-void deletePegawai(list_pegawai &Lpegawai, infotype_pegawai X){
-        if (first(Lpegawai) == NULL){
-        cout<<"Error Data Kosong"<<endl;
+void deletePegawai(list_pegawai &Lpegawai, address_pegawai P){
+    if (P == first(Lpegawai)){
+        deleteFirstPegawai(Lpegawai, P);
     }
-    else {
-        address_pegawai P = findPegawai(Lpegawai, X);
-        if (P == first(Lpegawai)){
-            deleteFirstPegawai(Lpegawai, P);
-        }
-        else if (P == last(Lpegawai)){
-            deleteLastPegawai(Lpegawai, P);
-        }
-        else if (P != NULL){
-            deleteAfterPegawai(Lpegawai, P);
-        }
-        else {
-            cout<<"Data Tidak Ditemukan"<<endl;
-        }
+    else if (P == last(Lpegawai)){
+        deleteLastPegawai(Lpegawai, P);
+    }
+    else{
+        deleteAfterPegawai(Lpegawai, P);
     }
 };
 
-void deleteDepartemen(list_departemen &Ldepartemen,infotype_departemen X){
-        if (first(Ldepartemen) == NULL){
-        cout<<"Error Data Kosong"<<endl;
+void deleteDepartemen(list_departemen &Ldepartemen, address_departemen D){
+    if (D == first(Ldepartemen)){
+        deleteFirstDepartemen(Ldepartemen, D);
     }
-    else {
-        address_departemen P = findDepartemen(Ldepartemen, X);
-        while (info(P).nama_departemen != X.nama_departemen and P != NULL){
-            P = next(P);
-        }
-        if (P == first(Ldepartemen)){
-            deleteFirstDepartemen(Ldepartemen, P);
-        }
-        else if (P == last(Ldepartemen)){
-            deleteAfterDepartemen(Ldepartemen, P);
-        }
-        else if (P != last(Ldepartemen) or P != first(Ldepartemen)){
-            deleteLastDepartemen(Ldepartemen, P);
-        }
-        else {
-            cout<<"Data Tidak Ditemukan"<<endl;
-        }
+    else if (D == last(Ldepartemen)){
+        deleteLastDepartemen(Ldepartemen, D);
+    }
+    else{
+        deleteAfterDepartemen(Ldepartemen, D);
     }
 };
 
