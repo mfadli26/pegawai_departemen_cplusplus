@@ -25,7 +25,6 @@ address_pegawai alokasiPegawai(infotype_pegawai X){
     info(P).nip = X.nip;
     next(P) = NULL;
     prev(P) = NULL;
-    relasi(P) = NULL;
     return P;
 };
 address_departemen alokasiDepartemen(infotype_departemen X){
@@ -34,7 +33,6 @@ address_departemen alokasiDepartemen(infotype_departemen X){
     info(P).alamat = X.alamat;
     next(P) = NULL;
     prev(P) = NULL;
-    relasi(P) = NULL;
     return P;
 };
 void dealokasiPegawai(address_pegawai P){
@@ -199,11 +197,6 @@ void printPegawai(list_pegawai Lpegawai){
             cout<<"Nama Pegawai = "<<info(P).nama<<endl;
             cout<<"Nip = "<<info(P).nip<<endl;
             cout<<"Departemen = ";
-            address_relasi Q = relasi(P);
-            while (Q != NULL){
-                cout<<info(Departemen(Q)).nama_departemen<<" ,";
-                Q = nextRelasi(Q);
-            }
             P = next(P);
             cout<<endl;
         }
@@ -240,11 +233,6 @@ void printDepartemen(list_departemen Ldepartemen){
             cout<<"Nama Departemen = "<<info(P).nama_departemen<<endl;
             cout<<"Alamat = "<<info(P).alamat<<endl;
             cout<<"Pegawai = ";
-            address_relasi Q = relasi(P);
-            while (Q != NULL){
-                cout<<info(Pegawai(Q)).nama<<" ,";
-                Q = nextRelasi(Q);
-            }
             P = next(P);
             cout<<endl;
         }

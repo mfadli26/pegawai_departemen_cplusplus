@@ -7,7 +7,6 @@
 #define nextRelasi(P) (P)->nextRelasi
 
 #define Departemen(P) (P)->Departemen
-#define nextDepartemen(P) (P)->nextDepartemen
 
 #include "doublelink_List.h"
 
@@ -28,6 +27,7 @@ void dealokasiRelasi(address_relasi R);
 void insertRelasi(list_relasi &L, address_relasi R);
 
 void deletefirstRelasi(list_relasi &Lrelasi);
-
+void deletelastRelasi(list_relasi &Lrelasi);
+void printinfoRelasi(list_relasi Lrelasi);
 
 #endif // RELASI_H_INCLUDED

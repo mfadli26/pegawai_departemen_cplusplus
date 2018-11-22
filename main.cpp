@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <conio.h>
 #include "doublelink_List.cpp"
+#include "relasi.cpp"
 
 using namespace std;
 
@@ -41,12 +42,11 @@ int main()
     cout<<"| 12. View Departemen Yang Telah Dimasuki Pegawai"<<endl;
     cout<<"| 13. View Departemen Dengan Pegawai Terbanyak"<<endl;
     cout<<"| 14. View Departemen Dengan Pegawai Paling Sedikit "<<endl;
-    cout<<"| 15. Keluar Aplikasi       asdasdadasdasdas          "<<endl;
+    cout<<"| 15. Keluar Aplikasi                 "<<endl;
     cout<<"-====================================-"<<endl;
     cout<<"Pilihan anda --> ";cin>>pil;
     switch(pil){
         case 1:{
-            printPegawai1(LP);
         }
     }
 }

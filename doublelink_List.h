@@ -10,8 +10,6 @@
 #define info(P) (P)->info
 #define next(P) (P)->next
 #define prev(P) (P)->prev
-#define relasi(P) (P)->relasi
-
 
 using namespace std;
 
@@ -31,14 +29,12 @@ typedef struct elmlist_relasi *address_relasi;
 
 struct elmlist_pegawai{
     infotype_pegawai info;
-    address_relasi relasi;
     address_pegawai next;
     address_pegawai prev;
 };
 
 struct elmlist_departemen{
     infotype_departemen info;
-    address_relasi relasi;
     address_departemen next;
     address_departemen prev;
 };
