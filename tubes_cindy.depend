@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1542906577 source:d:\data & aplikasi\data\kuliah\semester 2\tubes_cindy\tubes_cindy\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"doublelink_List.cpp"
+
+1542906560 d:\data & aplikasi\data\kuliah\semester 2\tubes_cindy\tubes_cindy\doublelink_list.cpp
+	<cstdlib>
+	<iostream>
+	<conio.h>
+	"doublelink_List.h"
+	"relasi.h"
+
+1542906495 d:\data & aplikasi\data\kuliah\semester 2\tubes_cindy\tubes_cindy\doublelink_list.h
+	<stdio.h>
+	<iostream>
+
+1542905575 d:\data & aplikasi\data\kuliah\semester 2\tubes_cindy\tubes_cindy\relasi.h
+	<stdio.h>
+	<iostream>
+	"doublelink_List.h"
+
