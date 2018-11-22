@@ -16,8 +16,11 @@ int main()
     infotype_departemen A;
     A.alamat = "asd";
     A.nama_departemen = "dsa";
+    infotype_pegawai B;
+    B.nama = "asd";
+    B.nip = "dsa";
     insertDepartemen(LD, alokasiDepartemen(A));
-    insertDepartemen(LD, alokasiDepartemen(A));
+    insertPegawai(LP, alokasiPegawai(B));
     mulai:
     system("cls");
     cout<<"--------------------------------------"<<endl;
@@ -38,12 +41,12 @@ int main()
     cout<<"| 12. View Departemen Yang Telah Dimasuki Pegawai"<<endl;
     cout<<"| 13. View Departemen Dengan Pegawai Terbanyak"<<endl;
     cout<<"| 14. View Departemen Dengan Pegawai Paling Sedikit "<<endl;
-    cout<<"| 15. Keluar Aplikasi                 "<<endl;
+    cout<<"| 15. Keluar Aplikasi       asdasdadasdasdas          "<<endl;
     cout<<"-====================================-"<<endl;
     cout<<"Pilihan anda --> ";cin>>pil;
     switch(pil){
         case 1:{
-            printDepartemen1(LD);
+            printPegawai1(LP);
         }
     }
 }

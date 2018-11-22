@@ -31,3 +31,11 @@ void insertRelasi(list_relasi &L, address_relasi R){
         last(L) = R;
     }
 };
+
+void deletefirstRelasi(list_relasi &Lrelasi){
+    address_relasi R = first(Lrelasi);
+    if(first(Lrelasi) == last(Lrelasi)){
+        first(Lrelasi) = next(first(Lrelasi));
+
+    }
+}

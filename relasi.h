@@ -27,7 +27,7 @@ void dealokasiRelasi(address_relasi R);
 
 void insertRelasi(list_relasi &L, address_relasi R);
 
-
+void deletefirstRelasi(list_relasi &Lrelasi);
 
 
 #endif // RELASI_H_INCLUDED
