@@ -15,10 +15,6 @@ void CreateDepartemen(list_departemen &Ldepartement){
     last(Ldepartement) = NULL;
 };
 
-void Lpegawai(list_departemen &Ldepartemen){
-    first(Ldepartemen) = NULL;
-    last(Ldepartemen) = NULL;
-};
 address_pegawai alokasiPegawai(infotype_pegawai X){
     address_pegawai P = new elmlist_pegawai;
     info(P).nama = X.nama;
@@ -182,7 +178,6 @@ void printPegawai(list_pegawai Lpegawai){
             P = next(P);
         }
     }
-    cout<<endl<<"Back to menu...";
 };
 
 void printPegawai1(list_pegawai Lpegawai){
@@ -218,7 +213,6 @@ void printDepartemen(list_departemen Ldepartemen){
             P = next(P);
         }
     }
-    cout<<endl<<"Back to menu...";
 };
 
 void printDepartemen1(list_departemen Ldepartemen){
