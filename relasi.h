@@ -25,9 +25,16 @@ address_relasi alokasiRelasi(address_pegawai P, address_departemen D);
 void dealokasiRelasi(address_relasi R);
 
 void insertRelasi(list_relasi &L, address_relasi R);
+address_relasi findRelasi(list_relasi, address_pegawai P, address_departemen D);
 
 void deletefirstRelasi(list_relasi &Lrelasi);
 void deletelastRelasi(list_relasi &Lrelasi);
-void printinfoRelasi(list_relasi Lrelasi);
+void deleteafterRelasi(list_relasi &Lrelasi, address_relasi &R);
 
+void printinfoRelasi(list_relasi Lrelasi);
+void printPegawaidenganDepartemen(list_relasi Lrelasi, list_pegawai Lpegawai);
+void printDepartemendenganPegawai(list_relasi Lrelasi, list_departemen Ldepartemen);
+void printDepartemendenganPegawaiTertentu(list_relasi Lrelasi, list_departemen Ldepartemen, address_pegawai P);
+void printPegawaidenganDepartemenTertentu(list_relasi Lrelasi, list_pegawai Lpegawai, address_departemen D);
+void printDepartemenPegawaiTerbanyak(list_relasi Lrelasi, list_departemen Ldepartemen);
 #endif // RELASI_H_INCLUDED
