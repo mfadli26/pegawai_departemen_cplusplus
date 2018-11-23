@@ -256,3 +256,12 @@ void deleteDepartemen(list_departemen &Ldepartemen, address_departemen D){
     }
 };
 
+void updatePegawai(address_pegawai &P, infotype_pegawai B){
+    info(P).nama = B.nama;
+    info(P).nip = B.nip;
+};
+
+void updateDepartemen(address_departemen &D, infotype_departemen A){
+    info(D).nama_departemen = A.nama_departemen;
+    info(D).alamat = A.alamat;
+};

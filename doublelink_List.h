@@ -82,4 +82,7 @@ void printDepartemen(list_departemen Ldepartemen);
 
 void printPegawai1(list_pegawai Lpegawai);
 void printDepartemen1(list_departemen Ldepartemen);
+
+void updatePegawai(address_pegawai &P, infotype_pegawai B);
+void updateDepartemen(address_departemen &D, infotype_departemen A);
 #endif // DOUBLELINK_LIST_H_INCLUDED

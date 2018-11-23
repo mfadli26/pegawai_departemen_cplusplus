@@ -37,4 +37,5 @@ void printDepartemendenganPegawai(list_relasi Lrelasi, list_departemen Ldepartem
 void printDepartemendenganPegawaiTertentu(list_relasi Lrelasi, list_departemen Ldepartemen, address_pegawai P);
 void printPegawaidenganDepartemenTertentu(list_relasi Lrelasi, list_pegawai Lpegawai, address_departemen D);
 void printDepartemenPegawaiTerbanyak(list_relasi Lrelasi, list_departemen Ldepartemen);
+
 #endif // RELASI_H_INCLUDED

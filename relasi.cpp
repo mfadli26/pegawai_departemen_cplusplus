@@ -279,3 +279,9 @@ void printDepartemenPegawaiTersedikit(list_relasi Lrelasi, list_departemen Ldepa
     cout<<endl<<"Departemen dengan jumlah Pegawai Tersedikit adalah "<<depart<<endl;
     cout<<"Sebanyak "<<jumlah_min<<" Pegawai"<<endl;
 };
+
+void updateRelasi(address_relasi &R, address_departemen D, address_pegawai P){
+    Pegawai(R) = P;
+    Departemen(R) = D;
+};
+
