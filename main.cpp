@@ -16,16 +16,10 @@ int main()
     CreatePegawai(Lpegawai);
     CreateListRelasi(Lrelasi);
     infotype_departemen A;
-    A.alamat = "asd";
-    A.nama_departemen = "dsa";
     infotype_pegawai B;
-    B.nama = "asd";
-    B.nip = "dsa";
-    insertDepartemen(Ldepartemen, alokasiDepartemen(A));
-    insertPegawai(Lpegawai, alokasiPegawai(B));
-    insertRelasi(Lrelasi, alokasiRelasi(first(Lpegawai), first(Ldepartemen)));
     mulai:
     system("cls");
+<<<<<<< HEAD
     cout<<"--------------------------------------"<<endl;
     cout<<"|          Sistem Kepegawaian         |"<<endl;
     cout<<"---------------------------------------"<<endl;
@@ -51,6 +45,30 @@ int main()
     cout<<"| 19. Mengganti Pegawai Yang Bekerja Di Departemen"<<endl;
     cout<<"| 20. Keluar Aplikasi                 "<<endl;
     cout<<"-====================================-"<<endl;
+=======
+    cout<<"-----------------------------------------------------"<<endl;
+    cout<<"|                 Sistem Kepegawaian                 |"<<endl;
+    cout<<"-----------------------------------------------------"<<endl;
+    cout<<"|                     ' Menu  '                      |"<<endl;
+    cout<<"| 1. Tambah Pegawai                                  |"<<endl;
+    cout<<"| 2. Tambah Departemen                               |"<<endl;
+    cout<<"| 3. View Daftar List Pegawai                        |"<<endl;
+    cout<<"| 4. View Daftar List Departemen                     |"<<endl;
+    cout<<"| 5. Cari Pegawai                                    |"<<endl;
+    cout<<"| 6. Cari Departemen                                 |"<<endl;
+    cout<<"| 7. Hapus Pegawai                                   |"<<endl;
+    cout<<"| 8. Hapus Departemen                                |"<<endl;
+    cout<<"| 9. Masukkan Pegawai Ke Departemen                  |"<<endl;
+    cout<<"| 10. Menambah Pegawai Di Departemen                 |"<<endl;
+    cout<<"| 11. Hapus Departemen Di Seorang Pegawai            |"<<endl;
+    cout<<"| 12. Hapus Pegawai Yang Masuk Ke Sebuah Departemen  |"<<endl;
+    cout<<"| 13. View Departemen Yang Telah Dimasuki Pegawai    |"<<endl;
+    cout<<"| 14. View Pegawai Yang Bekerja Di Departemen        |"<<endl;
+    cout<<"| 15. View Departemen Dengan Pegawai Terbanyak       |"<<endl;
+    cout<<"| 16. View Departemen Dengan Pegawai Paling Sedikit  |"<<endl;
+    cout<<"| 17. Keluar Aplikasi                                |"<<endl;
+    cout<<"-===================================================-"<<endl;
+>>>>>>> ecb3c5d640efaeb69b9d6068033967f9a71c5f97
     cout<<"Pilihan anda --> ";cin>>pil;
     system("cls");
     switch(pil){
