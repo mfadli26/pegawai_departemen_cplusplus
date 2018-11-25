@@ -19,6 +19,7 @@ int main()
     infotype_pegawai B;
     mulai:
     system("cls");
+<<<<<<< HEAD
     cout<<"--------------------------------------"<<endl;
     cout<<"|          Sistem Kepegawaian         |"<<endl;
     cout<<"---------------------------------------"<<endl;
@@ -37,11 +38,37 @@ int main()
     cout<<"| 12. Hapus Pegawai Yang Masuk Ke Sebuah Departemen"<<endl;
     cout<<"| 13. View Departemen Yang Telah Dimasuki Pegawai"<<endl;
     cout<<"| 14. View Pegawai Yang Bekerja Di Departemen"<<endl;
-    cout<<"| 15. Update Pegawai                  "<<endl;
-    cout<<"| 16. Update Departemen               "<<endl;
-    cout<<"| 17. Mengganti Pegawai Yang Bekerja Di Departemen"<<endl;
-    cout<<"| 18. Keluar Aplikasi                 "<<endl;
+    cout<<"| 15. View Departemen Dengan Pegawai Terbanyak"<<endl;
+    cout<<"| 16. View Departemen Dengan Pegawai Paling Sedikit "<<endl;
+    cout<<"| 17. Update Pegawai                  "<<endl;
+    cout<<"| 18. Update Departemen               "<<endl;
+    cout<<"| 19. Mengganti Pegawai Yang Bekerja Di Departemen"<<endl;
+    cout<<"| 20. Keluar Aplikasi                 "<<endl;
     cout<<"-====================================-"<<endl;
+=======
+    cout<<"-----------------------------------------------------"<<endl;
+    cout<<"|                 Sistem Kepegawaian                 |"<<endl;
+    cout<<"-----------------------------------------------------"<<endl;
+    cout<<"|                     ' Menu  '                      |"<<endl;
+    cout<<"| 1. Tambah Pegawai                                  |"<<endl;
+    cout<<"| 2. Tambah Departemen                               |"<<endl;
+    cout<<"| 3. View Daftar List Pegawai                        |"<<endl;
+    cout<<"| 4. View Daftar List Departemen                     |"<<endl;
+    cout<<"| 5. Cari Pegawai                                    |"<<endl;
+    cout<<"| 6. Cari Departemen                                 |"<<endl;
+    cout<<"| 7. Hapus Pegawai                                   |"<<endl;
+    cout<<"| 8. Hapus Departemen                                |"<<endl;
+    cout<<"| 9. Masukkan Pegawai Ke Departemen                  |"<<endl;
+    cout<<"| 10. Menambah Pegawai Di Departemen                 |"<<endl;
+    cout<<"| 11. Hapus Departemen Di Seorang Pegawai            |"<<endl;
+    cout<<"| 12. Hapus Pegawai Yang Masuk Ke Sebuah Departemen  |"<<endl;
+    cout<<"| 13. View Departemen Yang Telah Dimasuki Pegawai    |"<<endl;
+    cout<<"| 14. View Pegawai Yang Bekerja Di Departemen        |"<<endl;
+    cout<<"| 15. View Departemen Dengan Pegawai Terbanyak       |"<<endl;
+    cout<<"| 16. View Departemen Dengan Pegawai Paling Sedikit  |"<<endl;
+    cout<<"| 17. Keluar Aplikasi                                |"<<endl;
+    cout<<"-===================================================-"<<endl;
+>>>>>>> ecb3c5d640efaeb69b9d6068033967f9a71c5f97
     cout<<"Pilihan anda --> ";cin>>pil;
     system("cls");
     switch(pil){
@@ -342,6 +369,18 @@ int main()
             goto mulai;
         }
         case 15:{
+            cout<<"Departemen Dengan Pegawai Terbanyak\n";
+            printDepartemenPegawaiTerbanyak(Lrelasi, Ldepartemen);
+            cout<<endl<<endl<<"Back to menu...";getche();
+            goto mulai;
+        }
+        case 16:{
+            cout<<"Departemen Dengan Pegawai Tersedikit\n";
+            printDepartemenPegawaiTersedikit(Lrelasi, Ldepartemen);
+            cout<<endl<<endl<<"Back to menu...";getche();
+            goto mulai;
+        }
+        case 17:{
             cout<<"Update Pegawai\n";
             cout<<endl;
             printPegawai(Lpegawai);
@@ -369,7 +408,7 @@ int main()
             }
             goto mulai;
         }
-        case 16:{
+        case 18:{
             cout<<"Update Departemen\n";
             cout<<endl;
             printDepartemen(Ldepartemen);
@@ -396,7 +435,7 @@ int main()
             }
             goto mulai;
         }
-        case 17:{
+        case 19:{
             cout<<"Mengganti Pegawai Yang Bekerja Di Departemen\n";
             printDepartemen(Ldepartemen);
             string a;
