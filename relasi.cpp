@@ -97,19 +97,6 @@ address_relasi findRelasi(list_relasi Lrelasi, address_pegawai P, address_depart
     return NULL;
 };
 
-void printinfoRelasi(list_relasi Lrelasi){
-    cout<<"Data Laptop"<<endl;
-    address_relasi Q = first(Lrelasi);
-    while(Q != NULL){
-        cout<<endl;
-        cout<<"Nama Pegawai : "<<info(Pegawai(Q)).nama<<endl;
-        cout<<"-----------------------"<<endl;
-        cout<<"Nama Departemen : "<<info(Departemen(Q)).nama_departemen<<endl;
-        cout<<"-----------------------"<<endl;
-        Q = nextRelasi(Q);
-    }
-}
-
 void printPegawaidenganDepartemen(list_relasi Lrelasi, list_pegawai Lpegawai){
     if(first(Lpegawai) == NULL){
         cout<<"Daftar Pegawai Kosong"<<endl;
@@ -222,62 +209,6 @@ void deleteSemuaRelasiPegawai(list_relasi &Lrelasi, address_pegawai P){
             R = nextRelasi(R);
         }
     }
-};
-
-void printDepartemenPegawaiTerbanyak(list_relasi Lrelasi, list_departemen Ldepartemen){
-    address_departemen D = first(Ldepartemen);
-    int jumlah_max = 0;
-    string depart;
-    while(D != NULL){
-        int jumlah = 0;
-        address_relasi R = first(Lrelasi);
-        while(R != NULL){
-            if(Departemen(R) == D){
-                jumlah++;
-            }
-            R = nextRelasi(R);
-        }
-        if(jumlah == jumlah_max){
-            jumlah_max = jumlah;
-            depart.append(info(D).nama_departemen);
-            depart.append(", ");
-        }
-        else if(jumlah > jumlah_max){
-            jumlah_max = jumlah;
-            depart = info(D).nama_departemen;
-        }
-        D = next(D);
-    }
-    cout<<endl<<"Departemen dengan jumlah Pegawai Terbanyak adalah "<<depart<<endl;
-    cout<<"Sebanyak "<<jumlah_max<<" Pegawai"<<endl;
-};
-
-void printDepartemenPegawaiTersedikit(list_relasi Lrelasi, list_departemen Ldepartemen){
-    address_departemen D = first(Ldepartemen);
-    int jumlah_min = 9999;
-    string depart;
-    while(D != NULL){
-        int jumlah = 0;
-        address_relasi R = first(Lrelasi);
-        while(R != NULL){
-            if(Departemen(R) == D){
-                jumlah++;
-            }
-            R = nextRelasi(R);
-        }
-        if(jumlah == jumlah_min){
-            jumlah_min = jumlah;
-            depart.append(info(D).nama_departemen);
-            depart.append(", ");
-        }
-        else if(jumlah < jumlah_min){
-            jumlah_min = jumlah;
-            depart = info(D).nama_departemen;
-        }
-        D = next(D);
-    }
-    cout<<endl<<"Departemen dengan jumlah Pegawai Tersedikit adalah "<<depart<<endl;
-    cout<<"Sebanyak "<<jumlah_min<<" Pegawai"<<endl;
 };
 
 void updateRelasi(address_relasi &R, address_departemen D, address_pegawai P){
