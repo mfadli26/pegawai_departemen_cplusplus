@@ -51,7 +51,7 @@
 	"relasi.h"
 	"doublelink_List.h"
 
-1542977370 source:c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\main.cpp
+1543140766 source:c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>
@@ -69,12 +69,12 @@
 	<stdio.h>
 	<iostream>
 
-1542977371 c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\relasi.h
+1543140372 c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\relasi.h
 	<stdio.h>
 	<iostream>
 	"doublelink_List.h"
 
-1542977371 c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\relasi.cpp
+1543140372 c:\users\muhammad fadli\documents\github\pegawai_departemen_cplusplus\relasi.cpp
 	<cstdlib>
 	<iostream>
 	<conio.h>
